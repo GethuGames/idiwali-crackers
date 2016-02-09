@@ -95,11 +95,6 @@ var FlowerPot = cc.Layer.extend({
                         onTouchEnded: this.onTouchEnded
                     }, this);
 
-        this.runAction(cc.sequence(
-            cc.delayTime(totalDuration - 2),
-            cc.callFunc(this.stopSystem, this)
-        ));
-
         this.schedule(this.sparkEmissionUpdate);
         this.schedule(this.sparkSpeedUpdate);
         this.schedule(this.sparkLifeUpdate);
@@ -130,18 +125,6 @@ var FlowerPot = cc.Layer.extend({
             this.unschedule(this.sparkLifeUpdate);
         }
     },
-
-    stopSystem: function () {
-        this.runAction(cc.sequence(
-            cc.delayTime(6.0),
-            cc.callFunc(this.removeSystem, this)
-        )); 
-    },
-
-    removeSystem: function() {
-        this.removeFromParent(true);
-    },
-
 
     onTouchBegan:function(touch, event) {
         return true;
