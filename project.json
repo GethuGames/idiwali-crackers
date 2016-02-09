@@ -1,0 +1,25 @@
+{
+    "project_type": "javascript",
+
+    "debugMode" : 1,
+    "showFPS" : false,
+    "frameRate" : 60,
+    "id" : "gameCanvas",
+    "renderMode" : 0,
+    "engineDir":"frameworks/cocos2d-html5",
+
+    "modules" : ["cocos2d", "extensions", "external", "pluginx", "plugin-facebook"],
+
+    "plugin": {
+        "facebook": {
+            "appId" : "173838392700103",
+            "xfbml": true,
+            "version": "v2.0"
+        }
+    },
+
+    "jsList" : [
+        "src/resource.js",
+        "src/FlowerPot.js"
+    ]
+}
